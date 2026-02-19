@@ -57,7 +57,7 @@ function Hero() {
         id="cta"
         className="flex flex-col items-center opacity-0 translate-y-20"
       >
-        <a href="#highlights" className="btn ">
+        <a href="#highlights" className="btn ease-in-out" >
         Buy
         </a>
         <p className="font-normal text-xl">
