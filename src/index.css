@@ -45,6 +45,25 @@ canvas {
   margin-inline-end: auto;
   position: relative;
   max-width: 1120px;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 640px) {
+  .screen-max-width {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .screen-max-width {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .screen-max-width {
+    padding-inline: 2.5rem;
+  }
 }
 
 /* =========================
@@ -101,6 +120,18 @@ canvas {
     @apply h-[calc(100vh-60px)];
   }
 
+  .navbar-blur {
+    @apply bg-black/80 backdrop-blur-md;
+  }
+
+  .mobile-menu-enter {
+    @apply translate-y-0 opacity-100;
+  }
+
+  .mobile-menu-exit {
+    @apply -translate-y-full opacity-0;
+  }
+
   .color-container {
     @apply flex items-center justify-center
            px-4 py-4 rounded-full
@@ -126,7 +157,7 @@ canvas {
 
   .section-heading {
   @apply text-gray font-medium
-         text-4xl md:text-5xl lg:text-6xl
+         text-2xl sm:text-3xl md:text-4xl lg:text-5xl
          tracking-tight
          opacity-0 translate-y-4;
 }
@@ -176,8 +207,8 @@ canvas {
 
   .hero-title {
     @apply text-center font-semibold
-           text-3xl text-gray-100
-           opacity-0
+           text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+           text-gray-100 opacity-0
            max-md:mb-10;
   }
 
@@ -221,7 +252,7 @@ canvas {
   @apply relative
          w-full
          max-w-[960px]
-         h-[38vh] sm:h-[52vh] md:h-[68vh]
+         h-[30vh] sm:h-[40vh] md:h-[50vh] lg:h-[60vh]
          mx-auto;
 }
 
