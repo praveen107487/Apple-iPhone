@@ -1,10 +1,10 @@
-@import "tailwindcss/preflight";
-@tailwind utilities;
-
-@reference "tailwindcss";
+/* =========================
+   TAILWIND ENTRY
+   ========================= */
+@import "tailwindcss";
 
 /* =========================
-   THEME (Tailwind v4)
+   THEME
    ========================= */
 @theme {
   --color-blue: #2997ff;
@@ -18,7 +18,7 @@
 }
 
 /* =========================
-   GLOBAL RESET
+   GLOBAL RESET (UNCHANGED)
    ========================= */
 * {
   margin: 0;
@@ -48,25 +48,57 @@ canvas {
 }
 
 /* =========================
-   UTILITIES
+   SAFE BUTTON (ISOLATED FIX)
+   ========================= */
+.btn {
+  /* layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* spacing (matches inline CSS exactly) */
+  padding: 6px 20px;
+  margin: 20px 0;
+
+  /* appearance */
+  background-color: #2997ff;
+  color: #ffffff;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+
+  /* 🔒 lock typography (CRITICAL) */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: inherit;
+
+  /* behavior */
+  text-decoration: none;
+  cursor: pointer;
+
+  /* safe transitions only */
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: #2997ff;
+  border-color: #2997ff;
+}
+
+/* =========================
+   UTILITIES (UNCHANGED)
    ========================= */
 @layer utilities {
-  /* USE IN MARKUP ONLY — NOT inside @apply */
   .flex-center {
     @apply flex items-center justify-center;
   }
 
   .nav-height {
     @apply h-[calc(100vh-60px)];
-  }
-
-  .btn {
-    @apply px-5 py-2 my-5 rounded-3xl
-           bg-blue text-white
-           border border-transparent
-           hover:bg-transparent
-           hover:border-blue
-           hover:text-blue;
   }
 
   .color-container {
