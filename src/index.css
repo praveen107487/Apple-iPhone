@@ -34,6 +34,7 @@ body {
   background: #000;
   border-color: #3b3b3b;
   user-select: none;
+  font-size: clamp(14px, 2vw, 16px);
 }
 
 canvas {
@@ -45,6 +46,8 @@ canvas {
   margin-inline-end: auto;
   position: relative;
   max-width: 1120px;
+  width: 100%;
+  padding: 0 clamp(16px, 5vw, 40px);
 }
 
 /* =========================
@@ -57,8 +60,8 @@ canvas {
   justify-content: center;
 
   /* spacing (matches inline CSS exactly) */
-  padding: 6px 20px;
-  margin: 20px 0;
+  padding: clamp(6px, 1.5vw, 10px) clamp(16px, 4vw, 24px);
+  margin: clamp(12px, 3vw, 20px) 0;
 
   /* appearance */
   background-color: #2997ff;
@@ -67,7 +70,7 @@ canvas {
   border: 1px solid transparent;
 
   /* 🔒 lock typography (CRITICAL) */
-  font-size: 14px;
+  font-size: clamp(12px, 2vw, 14px);
   font-weight: 500;
   line-height: 1.2;
   font-family: inherit;
@@ -103,37 +106,37 @@ canvas {
 
   .color-container {
     @apply flex items-center justify-center
-           px-4 py-4 rounded-full
+           px-3 sm:px-4 py-2 sm:py-4 rounded-full
            bg-gray-300 backdrop-blur;
   }
 
   .size-btn-container {
     @apply flex items-center justify-center
-           p-1 ml-3 gap-1
+           p-1 ml-2 sm:ml-3 gap-1
            rounded-full bg-gray-300 backdrop-blur;
   }
 
   .size-btn {
-    @apply w-10 h-10 text-sm
+    @apply w-8 sm:w-10 h-8 sm:h-10 text-xs sm:text-sm
            flex items-center justify-center
            bg-white text-black
            rounded-full transition-all;
   }
 
   .common-padding {
-    @apply py-20 px-5 sm:py-32 sm:px-10;
+    @apply py-6 px-4 sm:py-12 sm:px-6 md:py-20 md:px-8 lg:py-32 lg:px-10;
   }
 
   .section-heading {
   @apply text-gray font-medium
-         text-4xl md:text-5xl lg:text-6xl
+         text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl
          tracking-tight
          opacity-0 translate-y-4;
 }
 
   .feature-text {
     @apply text-gray font-semibold
-           text-lg md:text-xl
+           text-base sm:text-lg md:text-xl lg:text-2xl
            max-w-md
            opacity-0 translate-y-[100px];
   }
@@ -141,7 +144,7 @@ canvas {
   .feature-text-container {
     @apply w-full flex flex-col md:flex-row
            items-center justify-center
-           mt-10 md:mt-16 gap-5;
+           mt-6 sm:mt-10 md:mt-16 gap-3 sm:gap-5;
   }
 
   .feature-video {
@@ -157,18 +160,19 @@ canvas {
 
   .link {
   @apply flex items-center
-         text-base md:text-lg
+         text-sm sm:text-base md:text-lg
          font-medium
          text-blue
          cursor-pointer
          opacity-0 translate-y-3
          transition-opacity transition-transform
-         hover:underline;
+         hover:underline
+         whitespace-nowrap;
 }
 
 
   .control-btn {
-    @apply ml-4 p-4
+    @apply ml-2 sm:ml-4 p-2 sm:p-4
            rounded-full
            bg-gray-300 backdrop-blur
            flex items-center justify-center;
@@ -176,20 +180,21 @@ canvas {
 
   .hero-title {
     @apply text-center font-semibold
-           text-3xl text-gray-100
+           text-xl sm:text-2xl md:text-4xl lg:text-5xl text-gray-100
            opacity-0
-           max-md:mb-10;
+           max-md:mb-10
+           px-2;
   }
 
   .hiw-title {
-    @apply text-4xl md:text-7xl
-           font-semibold text-center;
+    @apply text-2xl sm:text-4xl md:text-5xl lg:text-7xl
+           font-semibold text-center px-2;
   }
 
   .hiw-subtitle {
-    @apply py-10 text-center
+    @apply py-6 sm:py-10 text-center
            text-gray font-semibold
-           text-xl md:text-2xl;
+           text-base sm:text-lg md:text-xl lg:text-2xl px-2;
   }
 
   .hiw-video {
@@ -202,18 +207,18 @@ canvas {
   .hiw-text-container {
     @apply flex flex-col md:flex-row
            justify-between items-start
-           gap-24;
+           gap-6 sm:gap-12 md:gap-24;
   }
 
   .hiw-text {
-    @apply text-gray text-xl
+    @apply text-gray text-base sm:text-lg md:text-xl
            font-normal md:font-semibold;
   }
 
   .hiw-bigtext {
-    @apply my-2
+    @apply my-1 sm:my-2
            text-white
-           text-3xl md:text-5xl
+           text-xl sm:text-3xl md:text-4xl lg:text-5xl
            font-normal md:font-semibold;
   }
 

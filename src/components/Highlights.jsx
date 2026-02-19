@@ -6,7 +6,7 @@ import VideoCarousel from "./VideoCarousel"
 const Highlights = () => {
   useGSAP(() => {
     gsap.to("#title", { opacity: 1, y: 0 })
-    gsap.to(".link", { opacity: 1, y: 0, duration: 1, stagger: 0.25 })
+    gsap.to(".link", { opacity: 1, y: 0, duration: 0.2, stagger: 0.25,delay: 1 })
   }, [])
 
   return (
@@ -14,16 +14,16 @@ const Highlights = () => {
       id="highlights"
       className="
         relative w-screen bg-zinc overflow-hidden
-        pt-40 pb-32
+        pt-12 sm:pt-20 md:pt-32 lg:pt-40 pb-8 sm:pb-16 md:pb-24 lg:pb-32
       "
     >
       <div className="screen-max-width">
         <div
           className="
-            flex items-center justify-between
-            min-h-[180px]
-            mb-16
-            gap-x-16
+            flex flex-col md:flex-row md:items-center md:justify-between
+            gap-4 sm:gap-6 md:gap-8 lg:gap-16
+            min-h-auto md:min-h-[180px]
+            mb-8 sm:mb-12 md:mb-16
           "
         >
           {/* LEFT */}
@@ -35,24 +35,25 @@ const Highlights = () => {
           </h1>
 
           {/* RIGHT */}
-          <div className="flex items-center gap-10">
-            <p className="link flex items-center gap-2">
-              Watch the film
-              <img
-                src={watchImg}
-                alt="watch"
-                className="ml-2.5 w-4 h-4"
-              />
-            </p>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+                      <p className="link flex items-center gap-2">
+            Watch the film
+            <img
+              src={watchImg}
+              alt="watch"
+              className="w-4 h-4"
+            />
+          </p>
 
-            <p className="link flex items-center gap-2">
-              Watch the event
-              <img
-                src={rightImg}
-                alt="right"
-                className="ml-3 w-4 h-4"
-              />
-            </p>
+          <p className="link flex items-center gap-2">
+            Watch the event
+            <img
+              src={rightImg}
+              alt="right"
+              className="w-4 h-4"
+            />
+          </p>
+
           </div>
         </div>
 

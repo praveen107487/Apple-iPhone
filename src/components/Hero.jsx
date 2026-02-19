@@ -21,27 +21,21 @@ function Hero() {
   }, [])
 
   useGSAP(() => {
-    gsap.to('#hero', {
-      opacity: 1,
-      delay: 1,
-    })
-    gsap.to('#cta', {
-      opacity: 1,
-      translateY: 0,
-      delay: 1,
-    })
+    gsap.to('#hero', { opacity: 1, delay: 1 })
+    gsap.to('#cta', { opacity: 1, y: 0, delay: 1 })
   }, [])
 
   return (
     <section className="w-full nav-height bg-black relative">
-      <div className="h-5/6 w-full flex-center flex-col">
+      {/* MAIN CONTENT */}
+      <div className="h-full w-full flex-center flex-col px-2 sm:px-4">
         <p id="hero" className="hero-title opacity-0">
           iPhone 15 Pro
         </p>
 
-        <div className="md:w-10/12 w-9/12">
+        <div className="w-[90%] sm:w-9/12 md:w-10/12 lg:w-8/12">
           <video
-            className="pointer-events-none"
+            className="pointer-events-none w-full"
             autoPlay
             loop
             muted
@@ -53,14 +47,20 @@ function Hero() {
         </div>
       </div>
 
+      {/* CTA */}
       <div
         id="cta"
-        className="flex flex-col items-center opacity-0 translate-y-20"
+        className="
+          absolute left-1/2 -translate-x-1/2
+          bottom-24
+          flex flex-col items-center
+          opacity-0 translate-y-6
+        "
       >
-        <a href="#highlights" className="btn ease-in-out" >
-        Buy
+        <a href="#highlights" className="btn ease-in-out">
+          Buy
         </a>
-        <p className="font-normal text-xl">
+        <p className="font-normal text-xs sm:text-sm md:text-base lg:text-xl px-2 text-center">
           From $199/month or $999
         </p>
       </div>
