@@ -45,6 +45,15 @@ canvas {
   margin-inline-end: auto;
   position: relative;
   max-width: 1120px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .screen-max-width {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 /* =========================
@@ -162,7 +171,7 @@ canvas {
          text-blue
          cursor-pointer
          opacity-0 translate-y-3
-         transition-opacity transition-transform
+         transition-all
          hover:underline;
 }
 

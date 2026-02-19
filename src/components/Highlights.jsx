@@ -14,30 +14,30 @@ const Highlights = () => {
       id="highlights"
       className="
         relative w-screen bg-zinc overflow-hidden
-        pt-40 pb-32
+        pt-32 sm:pt-40 md:pt-48 pb-16 sm:pb-24 md:pb-32
       "
     >
-      <div className="screen-max-width">
+      <div className="screen-max-width px-4 sm:px-6 lg:px-8">
         <div
           className="
-            flex items-center justify-between
+            flex flex-col sm:flex-row items-start sm:items-center justify-between
             min-h-[180px]
-            mb-16
-            gap-x-16
+            mb-8 sm:mb-12 lg:mb-16
+            gap-6 sm:gap-8 lg:gap-12 w-full
           "
         >
-          {/* LEFT */}
+          {/* TITLE */}
           <h1
             id="title"
-            className="section-heading flex-shrink-0"
+            className="section-heading text-left shrink-0"
           >
             Get the highlights.
           </h1>
 
-          {/* RIGHT */}
-          <div className="flex items-center gap-10">
+          {/* LINKS */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:gap-10">
             <p className="link flex items-center gap-2">
-              Watch the film
+              Watch film
               <img
                 src={watchImg}
                 alt="watch"
@@ -46,7 +46,7 @@ const Highlights = () => {
             </p>
 
             <p className="link flex items-center gap-2">
-              Watch the event
+              Watch event
               <img
                 src={rightImg}
                 alt="right"
