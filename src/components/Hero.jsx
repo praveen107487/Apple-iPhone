@@ -20,6 +20,17 @@ function Hero() {
     }
   }, [])
 
+  const handleSmoothScroll = (e) => {
+    e.preventDefault()
+    const element = document.querySelector('#highlights')
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
+
   useGSAP(() => {
     gsap.to('#hero', { opacity: 1, delay: 1 })
     gsap.to('#cta', { opacity: 1, y: 0, delay: 1 })
@@ -57,9 +68,9 @@ function Hero() {
           opacity-0 translate-y-6
         "
       >
-        <a href="#highlights" className="btn ease-in-out">
+        <a href="#highlights" className="btn ease-in-out" onClick={handleSmoothScroll}>
           Buy
-        </a>
+        </a >
         <p className="font-normal text-xs sm:text-sm md:text-base lg:text-xl px-2 text-center">
           From $199/month or $999
         </p>
