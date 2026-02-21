@@ -1,48 +1,37 @@
-import { appleImg, bagImg, searchImg } from '../utils'
-import { navLists } from '../constants'
+import { appleImg, bagImg, searchImg } from '../utils';
+import { navLists } from '../constants';
 
 const Navbar = () => {
   return (
-    <header className="w-full h-[50px] sm:h-[60px] flex items-center px-3 sm:px-5">
-      <nav className="flex w-full screen-max-width items-center justify-between">
+    <header className="w-full py-5 px-3 sm:px-6 md:px-8 lg:px-10 flex justify-between items-center">
+      <nav className="flex w-full screen-max-width items-center justify-between max-sm:mx-4 max-sm:w-[calc(100%-2rem)]">
         {/* Apple Logo */}
-        <img 
-          src={appleImg} 
-          alt="Apple" 
-          width={14} 
-          height={18}
-          className="w-3 sm:w-3.5 h-auto" 
-        />
+        <div className="flex items-center shrink-0">
+          <img src={appleImg} alt="Apple" width={14} height={18} />
+        </div>
 
-        {/* Center Nav Items */}
-        <div className="hidden md:flex flex-1 justify-center gap-4 lg:gap-8">
+        {/* Center Nav Items - Hidden on small screens */}
+        <div className="flex flex-1 justify-center items-center gap-10 max-sm:hidden">
           {navLists.map((nav) => (
-            <div
-              key={nav}
-              className="text-xs sm:text-sm lg:text-base cursor-pointer text-gray opacity-80
-                         hover:opacity-100 hover:text-white
-                         transition-colors duration-300"
-            >
+            <div key={nav} className="text-sm cursor-pointer text-gray hover:text-white transition-all">
               {nav}
             </div>
           ))}
         </div>
 
         {/* Right Icons */}
-        <div className="flex items-center gap-3 sm:gap-5 lg:gap-7 ml-auto">
+        <div className="flex items-baseline gap-7 max-sm:justify-end max-sm:flex-1">
           <img 
             src={searchImg} 
             alt="search" 
             width={18} 
-            height={18}
-            className="w-4 sm:w-5 h-auto cursor-pointer"
+            height={18} 
           />
           <img 
             src={bagImg} 
             alt="bag" 
             width={18} 
-            height={18}
-            className="w-4 sm:w-5 h-auto cursor-pointer"
+            height={18} 
           />
         </div>
       </nav>
