@@ -147,7 +147,7 @@ canvas {
   }
 
   .size-btn {
-    @apply w-8 sm:w-10 h-8 sm:h-10 text-xs sm:text-sm
+    @apply w-10 h-10 text-sm
            flex items-center justify-center
            bg-white text-black
            rounded-full transition-all;

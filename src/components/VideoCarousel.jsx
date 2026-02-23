@@ -160,7 +160,7 @@ const VideoCarousel = () => {
       </div>
 
       {/* ================= APPLE STYLE TWO-ISLAND CONTROLS ================= */}
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center pb-10">
         <div className="flex items-center justify-center gap-3 sm:gap-4 rounded-full bg-[#1d1d1f]/80 backdrop-blur-xl border border-white/10 shadow-2xl px-3 sm:px-4 min-w-[170px] sm:min-w-[210px] h-12 sm:h-14">
           {/* DOTS */}
           <div className="flex flex-nowrap items-center gap-3">
