@@ -49,7 +49,7 @@ function Hero() {
       {/* CTA */}
       <div
         id="cta"
-        className="flex flex-col items-center opacity-0 translate-y-20"
+        className="flex flex-col items-center opacity-0 translate-y-10 -mt-8"
       >
         <a href="#highlights" className="btn ease-in-out" >
         Buy

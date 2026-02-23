@@ -2,28 +2,25 @@ import React, { useEffect } from 'react'
 import Hero from './components/Hero'
 import Highlights from './components/Highlights'
 import Navbar from './components/Navbar'
-
+import Model from './components/Model'
 function App() {
   useEffect(() => {
-    // Add smooth scrolling behavior
     document.documentElement.style.scrollBehavior = 'smooth'
-    
-    // Add padding to body to account for fixed navbar
-    document.body.style.paddingTop = '60px'
-    
+    document.body.style.paddingTop = '45px'
     return () => {
       document.documentElement.style.scrollBehavior = ''
       document.body.style.paddingTop = ''
     }
   }, [])
 
-   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Highlights />
-    </>
-  )
+return (
+  <div>
+    <Navbar />
+    <Hero />
+    <Highlights />
+    <Model />
+  </div>
+)
 }
 
 export default App
