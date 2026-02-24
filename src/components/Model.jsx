@@ -61,7 +61,7 @@ const Model = () => {
           Take a closer look.
         </h1>
 
-        <div className="flex flex-col items-center mt-2">
+        <div className="flex flex-col items-center">
           
           {/* MODEL VIEWER CONTAINER */}
           <div className="w-full h-[68vh] sm:h-[78vh] md:h-[88vh] overflow-hidden relative">
@@ -99,9 +99,9 @@ const Model = () => {
           </div>
 
           {/* CONTROLS AREA */}
-          <div className="mx-auto w-full -mt-6">
+          <div className="mx-auto w-full pt-6">
             
-            <p className="text-sm font-light text-center mb-4 mt-6 transition-all duration-300">
+            <p className="text-sm font-light text-center mb-6 transition-all duration-300">
               {model.title}
             </p>
 
