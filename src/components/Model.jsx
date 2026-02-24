@@ -57,7 +57,10 @@ const Model = () => {
       <div className="screen-max-width">
         
         {/* HEADING */}
-        <h1 id="heading" className="section-heading mt-24 md:mt-32 lg:mt-36 pt-4">
+        <h1
+          id="heading"
+          className="section-heading mt-24 md:mt-32 lg:mt-36 pt-4 transform translate-y-8"
+        >
           Take a closer look.
         </h1>
 
@@ -101,12 +104,10 @@ const Model = () => {
           {/* CONTROLS AREA */}
           <div className="mx-auto w-full mt-2">
             
-            {/* Model title - added mt-6 for space above */}
             <p className="text-sm font-light text-center mb-4 mt-6 transition-all duration-300">
               {model.title}
             </p>
 
-            {/* Floating Dock - added mb-10 for space below */}
             <div className="flex-center -mt-4 mb-10">
               <div className="flex items-center justify-between gap-8 px-6 py-4 rounded-full bg-gray-300/10 backdrop-blur-lg border border-white/10 shadow-xl">
                 
@@ -118,7 +119,10 @@ const Model = () => {
                       className="w-6 h-6 rounded-full cursor-pointer transition-transform hover:scale-110 border-2"
                       style={{
                         backgroundColor: item.color[0],
-                        borderColor: model.title === item.title ? "white" : "transparent",
+                        borderColor:
+                          model.title === item.title
+                            ? "white"
+                            : "transparent",
                       }}
                       onClick={() => setModel(item)}
                     />
@@ -135,7 +139,8 @@ const Model = () => {
                       key={label}
                       className="size-btn"
                       style={{
-                        backgroundColor: size === value ? "white" : "transparent",
+                        backgroundColor:
+                          size === value ? "white" : "transparent",
                         color: size === value ? "black" : "white",
                         padding: "10px 20px",
                         borderRadius: "9999px",

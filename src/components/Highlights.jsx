@@ -5,8 +5,26 @@ import VideoCarousel from "./VideoCarousel"
 
 const Highlights = () => {
   useGSAP(() => {
-    gsap.to("#title", { opacity: 1, y: 0 })
-    gsap.to(".link", { opacity: 1, y: 0, duration: 0.2, stagger: 0.25,delay: 1 })
+    // Title animation (slightly higher end position)
+    gsap.fromTo(
+      "#title",
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: -6, duration: 0.8, ease: "power2.out" }
+    )
+
+    // Links animation (staggered + slightly higher)
+    gsap.fromTo(
+      ".link",
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: -6,
+        duration: 0.5,
+        stagger: 0.25,
+        delay: 1,
+        ease: "power2.out",
+      }
+    )
   }, [])
 
   return (
