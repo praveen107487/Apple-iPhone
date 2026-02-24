@@ -11,7 +11,6 @@ import { models, sizes } from "../constants";
 import { animateWithGsapTimeline } from "../utils/animations";
 
 const Model = () => {
-  // --- STATE ---
   const [size, setSize] = useState("small");
   const [model, setModel] = useState({
     title: "iPhone 15 Pro in Natural Titanium",
@@ -19,7 +18,6 @@ const Model = () => {
     img: yellowImg,
   });
 
-  // --- REFS ---
   const cameraControlSmall = useRef();
   const cameraControlLarge = useRef();
 
@@ -31,7 +29,6 @@ const Model = () => {
 
   const tl = gsap.timeline();
 
-  // --- ANIMATIONS ---
   useEffect(() => {
     if (size === "large") {
       animateWithGsapTimeline(tl, small, smallRotation, "#view1", "#view2", {
@@ -49,7 +46,7 @@ const Model = () => {
   }, [size, smallRotation, largeRotation, tl]);
 
   useGSAP(() => {
-    gsap.to("#heading", { y: 0, opacity: 1 });
+    gsap.to("#heading", { y: 20, opacity: 1 });
   }, []);
 
   return (
@@ -59,7 +56,7 @@ const Model = () => {
         {/* HEADING */}
         <h1
           id="heading"
-          className="section-heading mt-24 md:mt-32 lg:mt-36 pt-4 transform translate-y-8"
+          className="section-heading mt-24 md:mt-32 lg:mt-36 pt-4"
         >
           Take a closer look.
         </h1>
@@ -102,13 +99,13 @@ const Model = () => {
           </div>
 
           {/* CONTROLS AREA */}
-          <div className="mx-auto w-full mt-2">
+          <div className="mx-auto w-full -mt-6">
             
             <p className="text-sm font-light text-center mb-4 mt-6 transition-all duration-300">
               {model.title}
             </p>
 
-            <div className="flex-center -mt-4 mb-10">
+            <div className="flex-center mb-10">
               <div className="flex items-center justify-between gap-8 px-6 py-4 rounded-full bg-gray-300/10 backdrop-blur-lg border border-white/10 shadow-xl">
                 
                 {/* COLOR PICKER */}
@@ -137,7 +134,6 @@ const Model = () => {
                   {sizes.map(({ label, value }) => (
                     <span
                       key={label}
-                      className="size-btn"
                       style={{
                         backgroundColor:
                           size === value ? "white" : "transparent",
@@ -157,7 +153,6 @@ const Model = () => {
 
               </div>
             </div>
-            {/* End Floating Dock */}
 
           </div>
         </div>
