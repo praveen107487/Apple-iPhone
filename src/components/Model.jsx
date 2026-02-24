@@ -50,21 +50,22 @@ const Model = () => {
   }, []);
 
   return (
-    <section className="common-padding pb-16 md:pb-24">
-      <div className="screen-max-width">
+    <section className="h-screen w-full overflow-hidden common-padding">
+      <div className="screen-max-width h-full flex flex-col">
         
         {/* HEADING */}
         <h1
           id="heading"
-          className="section-heading mt-24 md:mt-32 lg:mt-36 pt-4"
+          className="section-heading mt-24 md:mt-32 lg:mt-36 pt-4 flex-shrink-0"
         >
           Take a closer look.
         </h1>
 
-        <div className="flex flex-col items-center">
+        {/* MAIN CONTENT */}
+        <div className="flex-1 flex flex-col items-center min-h-0">
           
-          {/* MODEL VIEWER CONTAINER */}
-          <div className="w-full h-[68vh] sm:h-[78vh] md:h-[88vh] overflow-hidden relative">
+          {/* MODEL VIEWER */}
+          <div className="w-full flex-1 relative min-h-0">
             <ModelView
               index={1}
               groupRef={small}
@@ -99,13 +100,20 @@ const Model = () => {
           </div>
 
           {/* CONTROLS AREA */}
-          <div className="mx-auto w-full pt-6">
+          <div className="w-full pt-6 flex-shrink-0">
             
-            <p className="text-sm font-light text-center mb-6 transition-all duration-300">
+            {/* Model title (selected color text) */}
+            <p className="text-sm font-light text-center mb-6 text-white transition-all duration-300">
               {model.title}
             </p>
 
-            <div className="flex-center mb-10">
+{/* Black spacer */}
+<div className="w-full h-1 bg-black my-4"></div>
+
+<div className="flex-center mb-10 opacity-0"> ... </div>
+
+            {/* Color picker and size selector - increased top margin for more space */}
+            <div className="flex-center mt-12 mb-10">
               <div className="flex items-center justify-between gap-8 px-6 py-4 rounded-full bg-gray-300/10 backdrop-blur-lg border border-white/10 shadow-xl">
                 
                 {/* COLOR PICKER */}
