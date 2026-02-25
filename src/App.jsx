@@ -12,15 +12,14 @@ function App() {
       document.body.style.paddingTop = ''
     }
   }, [])
-
-return (
-  <div>
-    <Navbar />
-    <Hero />
-    <Highlights />
-    <Model />
-  </div>
-)
+  return (
+    <div>
+      <Navbar />
+      <Hero />
+      <Highlights />
+      <Model />
+    </div>
+  )
 }
 
 export default App
