@@ -51,12 +51,12 @@ const Model = () => {
 
   return (
     <section className="h-screen w-full overflow-hidden common-padding">
-      <div className="screen-max-width h-full flex flex-col">
+      <div className="screen-max-width p-12 px-4 sm:px-6 md:px-8 lg:px-10 h-full flex flex-col">
         
         {/* HEADING */}
         <h1
           id="heading"
-          className="section-heading mt-24 md:mt-32 lg:mt-36 pt-4 flex-shrink-0"
+          className="section-heading mt-24 md:mt-32 lg:mt-36 pt-4 flex-shrink-0 text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
         >
           Take a closer look.
         </h1>
@@ -107,13 +107,11 @@ const Model = () => {
               {model.title}
             </p>
 
-{/* Black spacer */}
-<div className="w-full h-1 bg-black my-4"></div>
+            {/* Black spacer */}
+            <div className="w-full h-1 bg-black my-4"></div>
 
-<div className="flex-center mb-10 opacity-0"> ... </div>
-
-            {/* Color picker and size selector - increased top margin for more space */}
-            <div className="flex-center mt-12 mb-10">
+            {/* Color picker and size selector - adjusted top margin for better positioning */}
+            <div className="flex-center mt-2 mb-10">
               <div className="flex items-center justify-between gap-8 px-6 py-4 rounded-full bg-gray-300/10 backdrop-blur-lg border border-white/10 shadow-xl">
                 
                 {/* COLOR PICKER */}
