@@ -3,40 +3,48 @@ import { footerLinks } from '../constants'
 
 const Footer = () => {
   return (
-    <footer className="py-5 sm:px-10 px-5">
-      <div className="screen-max-width">
-        <div>
-          <p className="font-semibold text-gray text-xs">
-            More ways to shop: {' '}
-            <span className="underline text-blue">
-            Find an Apple Store {' '}
-            </span>
-            or {' '}
-            <span className="underline text-blue">
-            other retailer
+    <footer className="bg-black text-gray-400 text-xs">
+      <div className="screen-max-width px-6 sm:px-10 py-12">
+
+        {/* Shop Info */}
+        <div className="space-y-2">
+          <p>
+            More ways to shop:{' '}
+            <span className="text-blue-500 underline cursor-pointer">
+              Find an Apple Store
+            </span>{' '}
+            or{' '}
+            <span className="text-blue-500 underline cursor-pointer">
+              other retailer
             </span>{' '}
             near you.
           </p>
-          <p className="font-semibold text-gray text-xs">
-            Or call 000800-040-1966
-          </p>
+          <p>Or call 000800-040-1966</p>
         </div>
 
-        <div className="bg-neutral-700 my-5 h-[1px] w-full" />
+        {/* Divider */}
+        <div className="border-t border-neutral-700 my-8" />
 
-        <div className="flex md:flex-row flex-col md:items-center justify-between">
-          <p className="font-semibold text-gray text-xs">Copright @ 2024 Apple Inc. All rights reserved.</p>
-          <div className="flex">
-            {footerLinks.map((link, i) => (
-              <p key={link} className="font-semibold text-gray text-xs">
-                {link}{' '}
-                {i !== footerLinks.length - 1 && (
-                  <span className="mx-2"> | </span>
-                )}
-              </p>
+        {/* Bottom Row */}
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+
+          <p className="text-gray-500">
+            Copyright © 2024 Apple Inc. All rights reserved.
+          </p>
+
+          <div className="flex flex-wrap gap-3">
+            {footerLinks.map((link) => (
+              <span
+                key={link}
+                className="hover:text-white transition-colors cursor-pointer"
+              >
+                {link}
+              </span>
             ))}
           </div>
+
         </div>
+
       </div>
     </footer>
   )

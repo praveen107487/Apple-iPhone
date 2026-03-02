@@ -15,11 +15,11 @@ const Features = () => {
         start: '-10% bottom',
       },
       onComplete: () => {
-        videoRef.current.play();
+        videoRef.current?.play();
       }
-    })
+    });
 
-    animateWithGsap('#features_title', { y: 0, opacity: 1 })
+    animateWithGsap('#features_title', { y: 0, opacity: 1 });
 
     animateWithGsap(
       '.g_grow',
@@ -30,14 +30,15 @@ const Features = () => {
     animateWithGsap(
       '.g_text',
       { y: 0, opacity: 1, ease: 'power2.inOut', duration: 1 }
-    )
+    );
   }, []);
 
   return (
     <section
       className="
-        relative w-full bg-zinc overflow-hidden
-        py-20 sm:py-24 md:py-32 lg:py-40
+        relative w-full bg-zinc
+        pt-20 sm:pt-24 md:pt-32 lg:pt-40
+        pb-56 sm:pb-64 md:pb-72 lg:pb-80
       "
     >
       <div className="screen-max-width px-4 sm:px-6 md:px-8 lg:px-10">
@@ -58,8 +59,7 @@ const Features = () => {
           </h1>
         </div>
 
-        {/* Decent spacing added here */}
-        <div className="flex flex-col justify-center items-center overflow-hidden gap-12 sm:gap-16 md:gap-10">
+        <div className="flex flex-col justify-center items-center gap-12 sm:gap-16 md:gap-10">
 
           {/* Headline Section */}
           <div className="mt-16 sm:mt-20 md:mt-24 pl-12 sm:pl-16 md:pl-24">
@@ -136,8 +136,9 @@ const Features = () => {
           </div>
         </div>
       </div>
+      <div className="w-full h-40 sm:h-56 md:h-64 lg:h-20 bg-zinc" />
     </section>
   )
 }
 
-export default Features
+export default Features;
