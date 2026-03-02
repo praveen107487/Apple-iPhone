@@ -22,6 +22,7 @@ function App() {
       <Hero />
       <Highlights />
       <Model />
+      <div className="h-20"></div>
       <Features />
       <div className="h-20"></div>
       <HowitWorks />
