@@ -100,7 +100,8 @@ This project was built to:
 
 ## 📸 Preview
 
-(Add screenshots or GIF previews here)
+<img width="1902" height="974" alt="Screenshot 2026-03-02 220514" src="https://github.com/user-attachments/assets/f2aa083b-d7d6-4e49-8078-b7e361c02d1a" />
+
 
 ---
 
