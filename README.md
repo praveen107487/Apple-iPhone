@@ -1,7 +1,3 @@
-Below is a **GitHub-ready `README.md`** version — structured, clean, and professional.
-
-You can copy-paste this directly into your repository.
-
 ---
 
 # 📱 iPhone 15 Pro Website Clone
