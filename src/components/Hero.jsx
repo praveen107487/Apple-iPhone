@@ -26,7 +26,7 @@ function Hero() {
   }, [])
 
   return (
-    <section className="w-full nav-height bg-black relative">
+<section className="w-full nav-height bg-black relative py-16 sm:py-20 md:py-24 lg:py-32">
       <div className="h-5/6 w-full flex-center flex-col">
         <p id="hero" className="hero-title opacity-0">
           iPhone 15 Pro
